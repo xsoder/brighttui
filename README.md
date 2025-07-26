@@ -1,8 +1,7 @@
-# BRIGHTTUI: X11 Only TUI application
+# BRIGHTTUI: Linux Brightness TUI application
 
-A brightness terminal application implemented for x11.
 > ![WARNING]
-> This is still under development.
+> This is might not work for everyone.
 
 ![image](screenshot.png)
 
