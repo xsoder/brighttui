@@ -161,7 +161,7 @@ int main(void) {
         }
 
         draw_slider(slider_win, current);
-        mvprintw(1, (screen_x - 24) / 2, "Brightness: %3d%%", current);
+        mvprintw(1, (screen_x - 24) / 2, "Brightness:%3d%%", current);
         refresh();
     }
 

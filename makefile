@@ -1,23 +1,20 @@
-CC=			gcc
+CC=				gcc
 CXX=			-Wall -Wextra
 LIB=			-lncurses
-SRC=			main.c
+SRC=			brighttui.c
 TARGET=			brighttui
 PREFIX?=		/usr/local/bin
 INSTALL?=		install
-BIN=			bin
 
 default:clean
-	mkdir -p $(BIN)
-	$(CC) $(CXX) $(SRC) -o $(BIN)/$(TARGET) $(LIB)
+	$(CC) $(CXX) $(SRC) -o $(TARGET) $(LIB)
 
 install: default
 	$(INSTALL) -d $(PREFIX)
 	$(INSTALL) -C $(BIN)/$(TARGET) $(PREFIX)
-	echo "Installed brighttui"
 
 uninstall: clean
-	rm -rf $(PREFIX)/$(BIN)
-	echo "Uninstalld brighttui "
+	rm -rf $(PREFIX)/$(TARGET)
+	echo "Uninstalld brighttui"
 clean:
-	rm -rf $(BIN)
+	rm -rf $(TARGET)
